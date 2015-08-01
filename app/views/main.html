@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <h1>Welcome to Spotify Application</h1>
+  <p class="lead">
+    Search for your favourite artists.
+  </p>
+</div>
+
+<div class="row marketing">
+  <form ng-submit="search()">
+    <input type="text" 
+      class="form-control"
+      ng-keyup="$event.keyCode == 13 && search()" ng-model="query" />
+    <button ng-click="search()" ng-disabled="!query" class="form-control" type="button" class="btn btn-default">Search</button>
+  </form>
+</div>

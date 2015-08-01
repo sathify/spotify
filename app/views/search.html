@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-12">
+  	<h4>Search results {{searchQuery? 'for ' +searchQuery: ''}}</h4>
+	<div ng-repeat="result in results" ng-click="getArtistPage(result.id)" class="col-sm-4">
+	  <figure>
+		  <div style="background-image:url({{result.images[0].url || placeHold}})" class="cover">
+		  <figcaption>
+		  	{{result.name}}
+		  </figcaption>
+	  <figure>
+	</div> 
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-12">
+  	<h4> Tops Tracks for {{topTracks[0].artists[0].name}}</h4>
+	<div ng-repeat="result in topTracks">
+		<a href="{{result.preview_url}}"> {{result.name}}
+		</a>
+	</div> 
+  </div>
+
+   <div class="col-sm-12">
+  	<h4> Related artists to {{topTracks[0].artists[0].name}}</h4>
+	<div ng-repeat="result in related">
+		<a href ng-click="getArtistPage(result.id)"> {{result.name}}
+		</a>
+	</div> 
+  </div>
+</div>
